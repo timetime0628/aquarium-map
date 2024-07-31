@@ -1,0 +1,1480 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>日本全国の水族館マップ</title>
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+    
+    
+  </head>
+  <body>
+
+
+<div id="mapid" style="height: 500px; width: 500px;"></div>
+
+
+<script>
+  
+  var mymap = L.map('mapid').setView([35.681, 139.767], 5);
+  L.tileLayer(
+    'http://{s}.tile.osm.org/{z}/{x}/{y}.png', 
+    {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+     }
+   ).addTo(mymap);
+   
+   var myPoints = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"室蘭水族館（室蘭民報みんなの水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.94341,42.33966]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"おたる水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.00830,43.23795]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"AOAO SAPPORO（アオアオサッポロ）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.35350,43.05795]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"ノシャップ寒流水族館（わっかりうむ）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.64641,45.44873]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"サンピアザ水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.47224,43.03762]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"登別マリンパークニクス"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.18254,42.45456]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"サケのふるさと　千歳水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.65904,42.83383]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"北の大地の水族館　山の水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [143.50101,43.74886]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"オホーツクとっかりセンター（アザラシランド・アザラシシーパラダイス・オホーツクタワー）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [143.37303,44.33382]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"札幌市豊平川さけ科学館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.34312,43.00105]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"標津サーモン科学館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [145.11674,43.65989]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"くしろ水族館ぷくぷく"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [144.40358,43.00657]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"美深チョウザメ館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [142.34464,44.54365]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"浅虫水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.86273,40.89757]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"マリエント（八戸市水産科学館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.5627588955459, 40.53978075233941]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"もぐらんぴあ水族館（久慈地下水族科学館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.81096,40.22054]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"仙台うみの杜水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.97878,38.26807]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクアテラス錦ケ丘"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.76443,38.25745]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"男鹿水族館GAO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.704665097409, 39.94230958291303]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"加茂水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.72478,38.76177]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクアマリンふくしま（ふくしま海洋科学館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.90126,36.94223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクアマリンいなわしろカワセミ水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.07452,37.56126]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"マリンピア日本海（新潟市水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.02815,37.92402]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"うみがたり（上越市立水族博物館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.23289,37.17362]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"長岡市寺泊水族博物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.76276,37.63234]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"あげしま海のでじたる館（尖閣湾揚島遊園）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.27760,38.08714]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"魚津水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.38812,36.79760]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"のとじま水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.97951,37.13769]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"越前松島水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.14671,36.25266]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"福井県海浜自然センター"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.84996,35.57213]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"越前がにミュージアム"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.01210,35.92461]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"なかがわ水族園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.11661,36.79486]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"水産学習館（海の駅みなかみ水紀行館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.96970,36.76587]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"さいたま水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.59805,36.17314]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクアワールド茨城県大洗水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.58803,36.32410]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"かすみがうら市水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.36362,36.07830]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"鴨川シーワールド"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.12245,35.11722]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"こみなと水族館（千葉大学海洋バイオシステム研究センター）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [140.18352,35.12136]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"サンシャイン水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.71919,35.72929]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"葛西臨海水族園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.85533,35.64077]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"しながわ水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.73759,35.58901]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクアパーク品川"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.73698,35.62857]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"すみだ水族館(東京スカイツリータウン・ソラマチ5F・6F)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.81120,35.71034]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"板橋区立熱帯環境植物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.66431,35.79193]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"多摩川ふれあい水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.36789,35.69696]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"足立区生物園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.80699,35.79312]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"井の頭公園自然文化園水生物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.57779,35.70034]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"小笠原海洋センター・水産センター"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [142.20376285518213, 27.09408912174538]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"【閉館】ヨコハマおもしろ水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.63795,35.44403]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"フォーチュンアクアリウム（横浜開運水族館）(チャイナスクエアビル3F(中華街大通り沿い))"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.64471,35.44264]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"【閉館】京急油壺マリンパーク"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.61179,35.16196]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"新江ノ島水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.48010,35.30951]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"横浜・八景島シーパラダイス"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.64413,35.33652]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクアリウムさがみはら（相模川ふれあい科学館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.32887,35.54739]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"よみうりランドアシカ館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.51778,35.62469]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"箱根園水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.00996,35.21181]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"横浜市間門小学校附属海水水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.65508,35.41782]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"北里大学アクアリウムラボ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.39384,35.53851]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"カワスイ 川崎水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.69510,35.52806]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"蓼科アミューズメント水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.25116,36.05206]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"国営アルプスあずみの公園（あずみの学校）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.83847,36.31439]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"富士湧水の里水族館（森の中の水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.82014,35.45524]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"伊豆・三津シーパラダイス"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.89632,35.01908]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"【閉園】あわしまマリンパーク"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.88818,35.03314]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"下田海中水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.94495,34.66687]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"東海大学海洋科学博物館（三保の水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.51797,35.01947]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"熱川バナナワニ園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.06435,34.81581]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"沼津港深海水族館（シーラカンス・ミュージアム）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.85805,35.08405]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"iZOO（イズー）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.98674,34.72261]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"浜名湖体験学習施設ウォット"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.60638,34.69936]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"スマートアクアリウム"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.38814,34.97314]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"幼魚水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [138.90024,35.10968]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アクア・トトぎふ（世界淡水魚園水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.80632,35.37051]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"匠の館森の水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.39182,36.18604]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"竹島水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.23119,34.81829]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"南知多ビーチランド"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.87283,34.78303]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"碧南海浜水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.97760,34.87375]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"名古屋港水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.87901,35.09124]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"ぎょぎょランド（豊川市赤塚山公園）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [137.36067,34.84829]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"シーライフ名古屋"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.88556,35.10779]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"世界のメダカ館（東山動植物園）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.97620,35.15922]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"鳥羽水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.84547,34.48490]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"志摩マリンランド(賢島)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.82089,34.31046]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"伊勢シーパラダイス（伊勢夫婦岩ふれあい水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.79019,34.50641]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"イルカ島"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.83127,34.49671]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"日本サンショウウオセンター（赤目四十八滝）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.07617,34.59151]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"道の駅紀宝町ウミガメ公園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.02167,33.76054]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"琵琶湖博物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.93857,35.06243]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"【廃業】丹後魚っ知館（宮津エネルギー研究所）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.25421,35.55722]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"京都水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.74739,34.98750]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"くじらの博物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.94489,33.60299]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"串本海中公園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.73041,33.48427]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"エビとカニの水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.60155,33.52092]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"京都大学　白浜水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.33662,33.69345]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アドベンチャーワールド"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.37387,33.67607]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"和歌山県立自然博物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.19479,34.15804]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"大阪・海遊館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.43039,34.65598]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"ニフレル"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.53392,34.80548]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"あくあぴあ芥川（高槻市立自然博物館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.59206,34.86389]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"須磨海浜水族園"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.12868,34.64407]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"城崎マリンワールド"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.81740,35.65908]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"姫路市立水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.67326,34.82262]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"アトア（atoa）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.19380,34.68330]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"とっとり賀露かにっこ館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.17935,35.53508]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"しまね海洋館アクアス"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.14383,34.95917]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"宍道湖自然館ゴビウス"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.86407,35.44733]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"渋川マリン水族館（玉野海洋博物館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.94646,34.49194]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"カブトガニ博物館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.52155,34.47886]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"めだかの学校"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.90318,34.86134]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"宮島水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.31508,34.29548]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"マリホ水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.41403,34.36086]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"福山大学マリンバイオセンター水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.17482,34.34921]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"海響館（市立しものせき水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.94249,33.95468]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"なぎさ水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.42882,33.94550]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"桂浜水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.57364,33.49727]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"足摺海洋館SATOUMI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.86327,32.79133]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"あきついお（四万十川学遊館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.91388,32.98965]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"むろと廃校水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.18141,33.31725]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"日和佐うみがめ博物館カレッタ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.54507,33.73857]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"マリンジャム"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.30597,33.56651]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"四国水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.80809,34.31288]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"新屋島水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.10229,34.35741]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"虹の森公園おさかな館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.71730,33.23780]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"マリンワールド海の中道"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.36548,33.66316]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"やながわ有明海水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.39519,33.15963]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"北九州市 水環境館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.87814,33.88454]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"長崎ペンギン水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.94453,32.75849]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"海きらら（九十九島水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.67871,33.16108]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"むつごろう水族館（諫早ゆうゆうランド干拓の里）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.08777,32.84653]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"海中水族館シードーナツ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.42249,32.50830]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"うみたまご（大分マリーンパレス水族館）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.55464,33.25010]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"つくみイルカ島（うみたま体験パーク）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.99408,33.07523]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"番匠おさかな館（道の駅やよい）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.83405,32.97075]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"白池地獄「熱帯魚館」（別府温泉）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.49133,33.28464]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"志布志湾大黒イルカランド"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.17368,31.46239]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"すみえファミリー水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.75977,32.66684]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"出の山淡水魚水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.89650,31.95559]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"高千穂峡淡水魚水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [131.29494,32.66742]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"かごしま水族館（いおワールド）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.56487,31.59625]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"奄美海洋展示館（奄美市大浜海浜公園）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [129.46779,28.38316]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"DMMかりゆし水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.65121,26.15727]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popupContent":"沖縄美ら海水族館"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.87837,26.69378]
+      }
+    }
+  ]
+}
+
+
+L.geoJSON(myPoints, 
+     {
+       onEachFeature: function onEachFeature(
+         feature,
+         layer
+       ){
+         if(feature.properties && feature.properties.popupContent){
+           layer.bindPopup(feature.properties.popupContent);
+         }
+       }
+     }
+   ).addTo(mymap);
+  
+</script>
+  <h3>日本全国の水族館マップ</h3>
+  <p>水族館のリストは水族館.com<a href="https://aquarium-japan.jp/aquariums-list/" target="_blank">(https://aquarium-japan.jp/aquariums-list/)</a>を参考にした。<br>
+また、本サイトの作成には、NEMOT's Lab<a href="https://www.lab-nemoto.jp/" target="_blank">(https://www.lab-nemoto.jp/)</a>のLeaflet教材を使用した。</p>
+  </body>
+</html>
